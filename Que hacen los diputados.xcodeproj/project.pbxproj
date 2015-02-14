@@ -1,0 +1,462 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		950E64BF1A8E9EF000F173C6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950E64B91A8E991A00F173C6 /* Alamofire.framework */; };
+		950E64C01A8E9EF000F173C6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950E64BB1A8E9BBD00F173C6 /* SwiftyJSON.framework */; };
+		950E64C21A8E9F3F00F173C6 /* DiputadosTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950E64C11A8E9F3F00F173C6 /* DiputadosTVC.swift */; };
+		95F7DF111A8E969300D832C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7DF101A8E969300D832C3 /* AppDelegate.swift */; };
+		95F7DF161A8E969300D832C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F7DF141A8E969300D832C3 /* Main.storyboard */; };
+		95F7DF181A8E969300D832C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F7DF171A8E969300D832C3 /* Images.xcassets */; };
+		95F7DF1B1A8E969300D832C3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95F7DF191A8E969300D832C3 /* LaunchScreen.xib */; };
+		95F7DF271A8E969300D832C3 /* Que_hacen_los_diputadosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7DF261A8E969300D832C3 /* Que_hacen_los_diputadosTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95F7DF211A8E969300D832C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95F7DF031A8E969300D832C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95F7DF0A1A8E969300D832C3;
+			remoteInfo = "Que hacen los diputados";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		950E64B91A8E991A00F173C6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		950E64BB1A8E9BBD00F173C6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		950E64C11A8E9F3F00F173C6 /* DiputadosTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiputadosTVC.swift; sourceTree = "<group>"; };
+		95F7DF0B1A8E969300D832C3 /* Que hacen los diputados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Que hacen los diputados.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F7DF0F1A8E969300D832C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95F7DF101A8E969300D832C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95F7DF151A8E969300D832C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95F7DF171A8E969300D832C3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		95F7DF1A1A8E969300D832C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		95F7DF201A8E969300D832C3 /* Que hacen los diputadosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Que hacen los diputadosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F7DF251A8E969300D832C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95F7DF261A8E969300D832C3 /* Que_hacen_los_diputadosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Que_hacen_los_diputadosTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95F7DF081A8E969300D832C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950E64BF1A8E9EF000F173C6 /* Alamofire.framework in Frameworks */,
+				950E64C01A8E9EF000F173C6 /* SwiftyJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F7DF1D1A8E969300D832C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95F7DF021A8E969300D832C3 = {
+			isa = PBXGroup;
+			children = (
+				950E64BB1A8E9BBD00F173C6 /* SwiftyJSON.framework */,
+				950E64B91A8E991A00F173C6 /* Alamofire.framework */,
+				95F7DF0D1A8E969300D832C3 /* Que hacen los diputados */,
+				95F7DF231A8E969300D832C3 /* Que hacen los diputadosTests */,
+				95F7DF0C1A8E969300D832C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95F7DF0C1A8E969300D832C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95F7DF0B1A8E969300D832C3 /* Que hacen los diputados.app */,
+				95F7DF201A8E969300D832C3 /* Que hacen los diputadosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95F7DF0D1A8E969300D832C3 /* Que hacen los diputados */ = {
+			isa = PBXGroup;
+			children = (
+				95F7DF101A8E969300D832C3 /* AppDelegate.swift */,
+				950E64C11A8E9F3F00F173C6 /* DiputadosTVC.swift */,
+				95F7DF141A8E969300D832C3 /* Main.storyboard */,
+				95F7DF171A8E969300D832C3 /* Images.xcassets */,
+				95F7DF191A8E969300D832C3 /* LaunchScreen.xib */,
+				95F7DF0E1A8E969300D832C3 /* Supporting Files */,
+			);
+			path = "Que hacen los diputados";
+			sourceTree = "<group>";
+		};
+		95F7DF0E1A8E969300D832C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95F7DF0F1A8E969300D832C3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95F7DF231A8E969300D832C3 /* Que hacen los diputadosTests */ = {
+			isa = PBXGroup;
+			children = (
+				95F7DF261A8E969300D832C3 /* Que_hacen_los_diputadosTests.swift */,
+				95F7DF241A8E969300D832C3 /* Supporting Files */,
+			);
+			path = "Que hacen los diputadosTests";
+			sourceTree = "<group>";
+		};
+		95F7DF241A8E969300D832C3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95F7DF251A8E969300D832C3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95F7DF0A1A8E969300D832C3 /* Que hacen los diputados */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95F7DF2A1A8E969300D832C3 /* Build configuration list for PBXNativeTarget "Que hacen los diputados" */;
+			buildPhases = (
+				95F7DF071A8E969300D832C3 /* Sources */,
+				95F7DF081A8E969300D832C3 /* Frameworks */,
+				95F7DF091A8E969300D832C3 /* Resources */,
+				950E64BE1A8E9BEA00F173C6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Que hacen los diputados";
+			productName = "Que hacen los diputados";
+			productReference = 95F7DF0B1A8E969300D832C3 /* Que hacen los diputados.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95F7DF1F1A8E969300D832C3 /* Que hacen los diputadosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95F7DF2D1A8E969300D832C3 /* Build configuration list for PBXNativeTarget "Que hacen los diputadosTests" */;
+			buildPhases = (
+				95F7DF1C1A8E969300D832C3 /* Sources */,
+				95F7DF1D1A8E969300D832C3 /* Frameworks */,
+				95F7DF1E1A8E969300D832C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95F7DF221A8E969300D832C3 /* PBXTargetDependency */,
+			);
+			name = "Que hacen los diputadosTests";
+			productName = "Que hacen los diputadosTests";
+			productReference = 95F7DF201A8E969300D832C3 /* Que hacen los diputadosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95F7DF031A8E969300D832C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = tovkal;
+				TargetAttributes = {
+					95F7DF0A1A8E969300D832C3 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Y7USV9TMGR;
+					};
+					95F7DF1F1A8E969300D832C3 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 95F7DF0A1A8E969300D832C3;
+					};
+				};
+			};
+			buildConfigurationList = 95F7DF061A8E969300D832C3 /* Build configuration list for PBXProject "Que hacen los diputados" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95F7DF021A8E969300D832C3;
+			productRefGroup = 95F7DF0C1A8E969300D832C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95F7DF0A1A8E969300D832C3 /* Que hacen los diputados */,
+				95F7DF1F1A8E969300D832C3 /* Que hacen los diputadosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95F7DF091A8E969300D832C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F7DF161A8E969300D832C3 /* Main.storyboard in Resources */,
+				95F7DF1B1A8E969300D832C3 /* LaunchScreen.xib in Resources */,
+				95F7DF181A8E969300D832C3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F7DF1E1A8E969300D832C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		950E64BE1A8E9BEA00F173C6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95F7DF071A8E969300D832C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F7DF111A8E969300D832C3 /* AppDelegate.swift in Sources */,
+				950E64C21A8E9F3F00F173C6 /* DiputadosTVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F7DF1C1A8E969300D832C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F7DF271A8E969300D832C3 /* Que_hacen_los_diputadosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95F7DF221A8E969300D832C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95F7DF0A1A8E969300D832C3 /* Que hacen los diputados */;
+			targetProxy = 95F7DF211A8E969300D832C3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95F7DF141A8E969300D832C3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95F7DF151A8E969300D832C3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95F7DF191A8E969300D832C3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95F7DF1A1A8E969300D832C3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95F7DF281A8E969300D832C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95F7DF291A8E969300D832C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95F7DF2B1A8E969300D832C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Que hacen los diputados/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		95F7DF2C1A8E969300D832C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Que hacen los diputados/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		95F7DF2E1A8E969300D832C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Que hacen los diputadosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Que hacen los diputados.app/Que hacen los diputados";
+			};
+			name = Debug;
+		};
+		95F7DF2F1A8E969300D832C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Que hacen los diputadosTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Que hacen los diputados.app/Que hacen los diputados";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95F7DF061A8E969300D832C3 /* Build configuration list for PBXProject "Que hacen los diputados" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95F7DF281A8E969300D832C3 /* Debug */,
+				95F7DF291A8E969300D832C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95F7DF2A1A8E969300D832C3 /* Build configuration list for PBXNativeTarget "Que hacen los diputados" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95F7DF2B1A8E969300D832C3 /* Debug */,
+				95F7DF2C1A8E969300D832C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95F7DF2D1A8E969300D832C3 /* Build configuration list for PBXNativeTarget "Que hacen los diputadosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95F7DF2E1A8E969300D832C3 /* Debug */,
+				95F7DF2F1A8E969300D832C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95F7DF031A8E969300D832C3 /* Project object */;
+}
