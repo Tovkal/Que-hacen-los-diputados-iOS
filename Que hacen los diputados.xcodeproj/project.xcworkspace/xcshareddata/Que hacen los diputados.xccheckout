@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>62DA0D1A-9A6F-4023-B3E7-A34B96ECE6B3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Que hacen los diputados</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E9C544F857DC3803837032CA86CBC615C56B3F32</key>
+		<string>https://github.com/Tovkal/Que-hacen-los-diputados-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Que hacen los diputados.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E9C544F857DC3803837032CA86CBC615C56B3F32</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Tovkal/Que-hacen-los-diputados-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E9C544F857DC3803837032CA86CBC615C56B3F32</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E9C544F857DC3803837032CA86CBC615C56B3F32</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Que%20hacen%20los%20diputados</string>
+		</dict>
+	</array>
+</dict>
+</plist>

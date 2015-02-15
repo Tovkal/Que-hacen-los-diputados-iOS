@@ -14,8 +14,8 @@ class DiputadosTVC: UITableViewController {
     
     let url = "http://api.quehacenlosdiputados.net/diputados"
     
-//    private var diputados = JSON.nullJSON
-    private var diputados: JSON = [["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":"87", "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"]]
+    //private var diputados = JSON.nullJSON
+    private var diputados: JSON = [["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +23,10 @@ class DiputadosTVC: UITableViewController {
         super.navigationController?.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
         
         //fetchData()
+        
+        var nib = UINib(nibName: "DeputyTableViewCell", bundle: nil)
+        
+        tableView.registerNib(nib, forCellReuseIdentifier: "DeputyCell")
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -32,7 +36,7 @@ class DiputadosTVC: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        animateTable()
+        //animateTable()
     }
     
     private func animateTable() {
@@ -70,8 +74,7 @@ class DiputadosTVC: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ParlamentarioCell", forIndexPath: indexPath) as UITableViewCell
-        
+        var cell = tableView.dequeueReusableCellWithIdentifier("DeputyCell") as DeputyTableViewCell
         
         let surnameAttributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(16.0)]
 
@@ -81,9 +84,37 @@ class DiputadosTVC: UITableViewController {
         
         fullName.appendAttributedString(NSAttributedString(string: ", \(name)"))
         
-        cell.textLabel?.attributedText = fullName
+        cell.name.attributedText = fullName
+        cell.imageView?.image = downloadProfileImage(self.diputados[indexPath.row]["id"].int!)
 
         return cell
+    }
+    
+    func downloadProfileImage(id: Int) -> UIImage? {
+        let imgURL: NSURL = NSURL(string: "http://quehacenlosdiputados.net/img/imagenesDipus/\(id).jpg")!
+        
+        // Download an NSData representation of the image at the URL
+        let request: NSURLRequest = NSURLRequest(URL: imgURL)
+        
+        var response = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)
+        
+        var image = UIImage(data: response!)
+        
+        return image
+        
+                
+        /*NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
+            if !(error? != nil) {
+                var image = UIImage(data: data)
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.imageView.image = image
+                })
+            }
+            else {
+                println("Error: \(error.localizedDescription)")
+            }
+        })*/
     }
     
 
@@ -143,7 +174,9 @@ class DiputadosTVC: UITableViewController {
                 else {
                     NSLog("Success: \(self.url)")
                     self.diputados = JSON(json!)
-                    self.animateTable()
+                    print(self.diputados)
+                    self.tableView.reloadData()
+//                    self.animateTable()
                 }
         }
     }

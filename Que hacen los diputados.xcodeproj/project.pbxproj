@@ -10,6 +10,9 @@
 		950E64BF1A8E9EF000F173C6 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950E64B91A8E991A00F173C6 /* Alamofire.framework */; };
 		950E64C01A8E9EF000F173C6 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950E64BB1A8E9BBD00F173C6 /* SwiftyJSON.framework */; };
 		950E64C21A8E9F3F00F173C6 /* DiputadosTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950E64C11A8E9F3F00F173C6 /* DiputadosTVC.swift */; };
+		9533D3E91A91445F0045BE1F /* DeputyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533D3E71A91445F0045BE1F /* DeputyTableViewCell.swift */; };
+		9533D3EA1A91445F0045BE1F /* DeputyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9533D3E81A91445F0045BE1F /* DeputyTableViewCell.xib */; };
+		95AD365B1A914B8900E0F63C /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD365A1A914B8900E0F63C /* UIImage+Utils.swift */; };
 		95F7DF111A8E969300D832C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7DF101A8E969300D832C3 /* AppDelegate.swift */; };
 		95F7DF161A8E969300D832C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F7DF141A8E969300D832C3 /* Main.storyboard */; };
 		95F7DF181A8E969300D832C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F7DF171A8E969300D832C3 /* Images.xcassets */; };
@@ -31,6 +34,9 @@
 		950E64B91A8E991A00F173C6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		950E64BB1A8E9BBD00F173C6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		950E64C11A8E9F3F00F173C6 /* DiputadosTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiputadosTVC.swift; sourceTree = "<group>"; };
+		9533D3E71A91445F0045BE1F /* DeputyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeputyTableViewCell.swift; sourceTree = "<group>"; };
+		9533D3E81A91445F0045BE1F /* DeputyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeputyTableViewCell.xib; sourceTree = "<group>"; };
+		95AD365A1A914B8900E0F63C /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
 		95F7DF0B1A8E969300D832C3 /* Que hacen los diputados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Que hacen los diputados.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F7DF0F1A8E969300D832C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95F7DF101A8E969300D832C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +97,9 @@
 				95F7DF171A8E969300D832C3 /* Images.xcassets */,
 				95F7DF191A8E969300D832C3 /* LaunchScreen.xib */,
 				95F7DF0E1A8E969300D832C3 /* Supporting Files */,
+				9533D3E81A91445F0045BE1F /* DeputyTableViewCell.xib */,
+				9533D3E71A91445F0045BE1F /* DeputyTableViewCell.swift */,
+				95AD365A1A914B8900E0F63C /* UIImage+Utils.swift */,
 			);
 			path = "Que hacen los diputados";
 			sourceTree = "<group>";
@@ -204,6 +213,7 @@
 			files = (
 				95F7DF161A8E969300D832C3 /* Main.storyboard in Resources */,
 				95F7DF1B1A8E969300D832C3 /* LaunchScreen.xib in Resources */,
+				9533D3EA1A91445F0045BE1F /* DeputyTableViewCell.xib in Resources */,
 				95F7DF181A8E969300D832C3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,7 +251,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				95F7DF111A8E969300D832C3 /* AppDelegate.swift in Sources */,
+				9533D3E91A91445F0045BE1F /* DeputyTableViewCell.swift in Sources */,
 				950E64C21A8E9F3F00F173C6 /* DiputadosTVC.swift in Sources */,
+				95AD365B1A914B8900E0F63C /* UIImage+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +385,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -389,6 +402,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
