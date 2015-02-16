@@ -27,17 +27,37 @@ class DiputadosTVC: UITableViewController {
         var nib = UINib(nibName: "DeputyTableViewCell", bundle: nil)
         
         tableView.registerNib(nib, forCellReuseIdentifier: "DeputyCell")
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        // Self-sizing table view cells in iOS 8 require that the rowHeight property of the table view be set to the constant UITableViewAutomaticDimension
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        // Self-sizing table view cells in iOS 8 are enabled when the estimatedRowHeight property of the table view is set to a non-zero value.
+        // Setting the estimated row height prevents the table view from calling tableView:heightForRowAtIndexPath: for every row in the table on first load;
+        // it will only be called as cells are about to scroll onscreen. This is a major performance optimization.
+        tableView.estimatedRowHeight = 100.0 // set this to whatever your "average" cell height is; it doesn't need to be very accurate
     }
     
     override func viewWillAppear(animated: Bool) {
-        //animateTable()
+        animateTable()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "contentSizeCategoryChanged:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
+    }
+    
+    // This function will be called when the Dynamic Type user setting changes (from the system Settings app)
+    func contentSizeCategoryChanged(notification: NSNotification) {
+        animateTable()
+    }
+
     
     private func animateTable() {
         tableView.reloadData()
@@ -74,18 +94,21 @@ class DiputadosTVC: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("DeputyCell") as DeputyTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("DeputyCell") as DeputyTableViewCell
         
+        // Build name string
         let surnameAttributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(16.0)]
-
         var fullName = NSMutableAttributedString(string: self.diputados[indexPath.row]["apellidos"].string!, attributes: surnameAttributes)
-        
         let name = self.diputados[indexPath.row]["nombre"].string!
-        
         fullName.appendAttributedString(NSAttributedString(string: ", \(name)"))
         
+        // Set cell attributes
         cell.name.attributedText = fullName
         cell.imageView?.image = downloadProfileImage(self.diputados[indexPath.row]["id"].int!)
+        
+        // Make sure the constraints have been added to this cell, since it may have just been created from scratch
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
 
         return cell
     }
@@ -117,52 +140,6 @@ class DiputadosTVC: UITableViewController {
         })*/
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     func fetchData() {
         Alamofire.request(.GET, url, parameters: ["only": "[\"id\",\"nombre\",\"apellidos\",\"partido\"]"])
             .responseJSON { (req, res, json, error) in
@@ -174,11 +151,8 @@ class DiputadosTVC: UITableViewController {
                 else {
                     NSLog("Success: \(self.url)")
                     self.diputados = JSON(json!)
-                    print(self.diputados)
-                    self.tableView.reloadData()
-//                    self.animateTable()
+                    self.animateTable()
                 }
         }
     }
-
 }
