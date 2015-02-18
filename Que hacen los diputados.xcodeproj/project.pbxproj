@@ -13,6 +13,22 @@
 		9533D3E91A91445F0045BE1F /* DeputyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533D3E71A91445F0045BE1F /* DeputyTableViewCell.swift */; };
 		9533D3EA1A91445F0045BE1F /* DeputyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9533D3E81A91445F0045BE1F /* DeputyTableViewCell.xib */; };
 		95AD365B1A914B8900E0F63C /* UIImage+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD365A1A914B8900E0F63C /* UIImage+Utils.swift */; };
+		95C8E26F1A9503400065A177 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E24F1A9503400065A177 /* MKAnnotationView+WebCache.m */; };
+		95C8E2701A9503400065A177 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2511A9503400065A177 /* NSData+ImageContentType.m */; };
+		95C8E2711A9503400065A177 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2531A9503400065A177 /* SDImageCache.m */; };
+		95C8E2721A9503400065A177 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2551A9503400065A177 /* SDWebImageCompat.m */; };
+		95C8E2731A9503400065A177 /* SDWebImageDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2571A9503400065A177 /* SDWebImageDecoder.m */; };
+		95C8E2741A9503400065A177 /* SDWebImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2591A9503400065A177 /* SDWebImageDownloader.m */; };
+		95C8E2751A9503400065A177 /* SDWebImageDownloaderOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E25B1A9503400065A177 /* SDWebImageDownloaderOperation.m */; };
+		95C8E2761A9503400065A177 /* SDWebImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E25D1A9503400065A177 /* SDWebImageManager.m */; };
+		95C8E2771A9503400065A177 /* SDWebImagePrefetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2601A9503400065A177 /* SDWebImagePrefetcher.m */; };
+		95C8E2781A9503400065A177 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2621A9503400065A177 /* UIButton+WebCache.m */; };
+		95C8E2791A9503400065A177 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2641A9503400065A177 /* UIImage+GIF.m */; };
+		95C8E27A1A9503400065A177 /* UIImage+MultiFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2661A9503400065A177 /* UIImage+MultiFormat.m */; };
+		95C8E27B1A9503400065A177 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E2681A9503400065A177 /* UIImage+WebP.m */; };
+		95C8E27C1A9503400065A177 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E26A1A9503400065A177 /* UIImageView+HighlightedWebCache.m */; };
+		95C8E27D1A9503400065A177 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E26C1A9503400065A177 /* UIImageView+WebCache.m */; };
+		95C8E27E1A9503400065A177 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 95C8E26E1A9503400065A177 /* UIView+WebCacheOperation.m */; };
 		95F7DF111A8E969300D832C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7DF101A8E969300D832C3 /* AppDelegate.swift */; };
 		95F7DF161A8E969300D832C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F7DF141A8E969300D832C3 /* Main.storyboard */; };
 		95F7DF181A8E969300D832C3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F7DF171A8E969300D832C3 /* Images.xcassets */; };
@@ -31,12 +47,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59E0E6EE12430F5DDFE7179E /* Pods-Que hacen los diputados.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Que hacen los diputados.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Que hacen los diputados/Pods-Que hacen los diputados.debug.xcconfig"; sourceTree = "<group>"; };
 		950E64B91A8E991A00F173C6 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		950E64BB1A8E9BBD00F173C6 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		950E64C11A8E9F3F00F173C6 /* DiputadosTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiputadosTVC.swift; sourceTree = "<group>"; };
+		9518A2CD1A93E21800B3C04C /* libPods-Que hacen los diputados-FastImageCache.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-Que hacen los diputados-FastImageCache.a"; path = "Pods/build/Debug-iphoneos/libPods-Que hacen los diputados-FastImageCache.a"; sourceTree = "<group>"; };
+		953290AD1A93E014003E95E9 /* Que hacen los diputados-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Que hacen los diputados-Bridging-Header.h"; sourceTree = "<group>"; };
 		9533D3E71A91445F0045BE1F /* DeputyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeputyTableViewCell.swift; sourceTree = "<group>"; };
 		9533D3E81A91445F0045BE1F /* DeputyTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeputyTableViewCell.xib; sourceTree = "<group>"; };
 		95AD365A1A914B8900E0F63C /* UIImage+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utils.swift"; sourceTree = "<group>"; };
+		95C8E24E1A9503400065A177 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
+		95C8E24F1A9503400065A177 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
+		95C8E2501A9503400065A177 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
+		95C8E2511A9503400065A177 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
+		95C8E2521A9503400065A177 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
+		95C8E2531A9503400065A177 /* SDImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDImageCache.m; sourceTree = "<group>"; };
+		95C8E2541A9503400065A177 /* SDWebImageCompat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageCompat.h; sourceTree = "<group>"; };
+		95C8E2551A9503400065A177 /* SDWebImageCompat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageCompat.m; sourceTree = "<group>"; };
+		95C8E2561A9503400065A177 /* SDWebImageDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDecoder.h; sourceTree = "<group>"; };
+		95C8E2571A9503400065A177 /* SDWebImageDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDecoder.m; sourceTree = "<group>"; };
+		95C8E2581A9503400065A177 /* SDWebImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloader.h; sourceTree = "<group>"; };
+		95C8E2591A9503400065A177 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloader.m; sourceTree = "<group>"; };
+		95C8E25A1A9503400065A177 /* SDWebImageDownloaderOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageDownloaderOperation.h; sourceTree = "<group>"; };
+		95C8E25B1A9503400065A177 /* SDWebImageDownloaderOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageDownloaderOperation.m; sourceTree = "<group>"; };
+		95C8E25C1A9503400065A177 /* SDWebImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageManager.h; sourceTree = "<group>"; };
+		95C8E25D1A9503400065A177 /* SDWebImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImageManager.m; sourceTree = "<group>"; };
+		95C8E25E1A9503400065A177 /* SDWebImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImageOperation.h; sourceTree = "<group>"; };
+		95C8E25F1A9503400065A177 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWebImagePrefetcher.h; sourceTree = "<group>"; };
+		95C8E2601A9503400065A177 /* SDWebImagePrefetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWebImagePrefetcher.m; sourceTree = "<group>"; };
+		95C8E2611A9503400065A177 /* UIButton+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WebCache.h"; sourceTree = "<group>"; };
+		95C8E2621A9503400065A177 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
+		95C8E2631A9503400065A177 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		95C8E2641A9503400065A177 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		95C8E2651A9503400065A177 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
+		95C8E2661A9503400065A177 /* UIImage+MultiFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MultiFormat.m"; sourceTree = "<group>"; };
+		95C8E2671A9503400065A177 /* UIImage+WebP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WebP.h"; sourceTree = "<group>"; };
+		95C8E2681A9503400065A177 /* UIImage+WebP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WebP.m"; sourceTree = "<group>"; };
+		95C8E2691A9503400065A177 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
+		95C8E26A1A9503400065A177 /* UIImageView+HighlightedWebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HighlightedWebCache.m"; sourceTree = "<group>"; };
+		95C8E26B1A9503400065A177 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
+		95C8E26C1A9503400065A177 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
+		95C8E26D1A9503400065A177 /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
+		95C8E26E1A9503400065A177 /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
 		95F7DF0B1A8E969300D832C3 /* Que hacen los diputados.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Que hacen los diputados.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F7DF0F1A8E969300D832C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95F7DF101A8E969300D832C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +98,8 @@
 		95F7DF201A8E969300D832C3 /* Que hacen los diputadosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Que hacen los diputadosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F7DF251A8E969300D832C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95F7DF261A8E969300D832C3 /* Que_hacen_los_diputadosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Que_hacen_los_diputadosTests.swift; sourceTree = "<group>"; };
+		B429A337F59C855562C16F8C /* libPods-Que hacen los diputados.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Que hacen los diputados.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7093039D3878530CA92BD92 /* Pods-Que hacen los diputados.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Que hacen los diputados.release.xcconfig"; path = "Pods/Target Support Files/Pods-Que hacen los diputados/Pods-Que hacen los diputados.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +122,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022FE704A9653DA28AADC659 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59E0E6EE12430F5DDFE7179E /* Pods-Que hacen los diputados.debug.xcconfig */,
+				E7093039D3878530CA92BD92 /* Pods-Que hacen los diputados.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		56472620B67776CC009EB959 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9518A2CD1A93E21800B3C04C /* libPods-Que hacen los diputados-FastImageCache.a */,
+				B429A337F59C855562C16F8C /* libPods-Que hacen los diputados.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		95C8E24D1A9503400065A177 /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				95C8E24E1A9503400065A177 /* MKAnnotationView+WebCache.h */,
+				95C8E24F1A9503400065A177 /* MKAnnotationView+WebCache.m */,
+				95C8E2501A9503400065A177 /* NSData+ImageContentType.h */,
+				95C8E2511A9503400065A177 /* NSData+ImageContentType.m */,
+				95C8E2521A9503400065A177 /* SDImageCache.h */,
+				95C8E2531A9503400065A177 /* SDImageCache.m */,
+				95C8E2541A9503400065A177 /* SDWebImageCompat.h */,
+				95C8E2551A9503400065A177 /* SDWebImageCompat.m */,
+				95C8E2561A9503400065A177 /* SDWebImageDecoder.h */,
+				95C8E2571A9503400065A177 /* SDWebImageDecoder.m */,
+				95C8E2581A9503400065A177 /* SDWebImageDownloader.h */,
+				95C8E2591A9503400065A177 /* SDWebImageDownloader.m */,
+				95C8E25A1A9503400065A177 /* SDWebImageDownloaderOperation.h */,
+				95C8E25B1A9503400065A177 /* SDWebImageDownloaderOperation.m */,
+				95C8E25C1A9503400065A177 /* SDWebImageManager.h */,
+				95C8E25D1A9503400065A177 /* SDWebImageManager.m */,
+				95C8E25E1A9503400065A177 /* SDWebImageOperation.h */,
+				95C8E25F1A9503400065A177 /* SDWebImagePrefetcher.h */,
+				95C8E2601A9503400065A177 /* SDWebImagePrefetcher.m */,
+				95C8E2611A9503400065A177 /* UIButton+WebCache.h */,
+				95C8E2621A9503400065A177 /* UIButton+WebCache.m */,
+				95C8E2631A9503400065A177 /* UIImage+GIF.h */,
+				95C8E2641A9503400065A177 /* UIImage+GIF.m */,
+				95C8E2651A9503400065A177 /* UIImage+MultiFormat.h */,
+				95C8E2661A9503400065A177 /* UIImage+MultiFormat.m */,
+				95C8E2671A9503400065A177 /* UIImage+WebP.h */,
+				95C8E2681A9503400065A177 /* UIImage+WebP.m */,
+				95C8E2691A9503400065A177 /* UIImageView+HighlightedWebCache.h */,
+				95C8E26A1A9503400065A177 /* UIImageView+HighlightedWebCache.m */,
+				95C8E26B1A9503400065A177 /* UIImageView+WebCache.h */,
+				95C8E26C1A9503400065A177 /* UIImageView+WebCache.m */,
+				95C8E26D1A9503400065A177 /* UIView+WebCacheOperation.h */,
+				95C8E26E1A9503400065A177 /* UIView+WebCacheOperation.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
 		95F7DF021A8E969300D832C3 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +188,8 @@
 				95F7DF0D1A8E969300D832C3 /* Que hacen los diputados */,
 				95F7DF231A8E969300D832C3 /* Que hacen los diputadosTests */,
 				95F7DF0C1A8E969300D832C3 /* Products */,
+				022FE704A9653DA28AADC659 /* Pods */,
+				56472620B67776CC009EB959 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +214,8 @@
 				9533D3E81A91445F0045BE1F /* DeputyTableViewCell.xib */,
 				9533D3E71A91445F0045BE1F /* DeputyTableViewCell.swift */,
 				95AD365A1A914B8900E0F63C /* UIImage+Utils.swift */,
+				953290AD1A93E014003E95E9 /* Que hacen los diputados-Bridging-Header.h */,
+				95C8E24D1A9503400065A177 /* SDWebImage */,
 			);
 			path = "Que hacen los diputados";
 			sourceTree = "<group>";
@@ -109,7 +225,7 @@
 			children = (
 				95F7DF0F1A8E969300D832C3 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		95F7DF231A8E969300D832C3 /* Que hacen los diputadosTests */ = {
@@ -126,7 +242,7 @@
 			children = (
 				95F7DF251A8E969300D832C3 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +252,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95F7DF2A1A8E969300D832C3 /* Build configuration list for PBXNativeTarget "Que hacen los diputados" */;
 			buildPhases = (
-				95F7DF071A8E969300D832C3 /* Sources */,
 				95F7DF081A8E969300D832C3 /* Frameworks */,
+				95F7DF071A8E969300D832C3 /* Sources */,
 				95F7DF091A8E969300D832C3 /* Resources */,
 				950E64BE1A8E9BEA00F173C6 /* ShellScript */,
 			);
@@ -250,10 +366,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C8E2791A9503400065A177 /* UIImage+GIF.m in Sources */,
+				95C8E2771A9503400065A177 /* SDWebImagePrefetcher.m in Sources */,
 				95F7DF111A8E969300D832C3 /* AppDelegate.swift in Sources */,
+				95C8E2701A9503400065A177 /* NSData+ImageContentType.m in Sources */,
 				9533D3E91A91445F0045BE1F /* DeputyTableViewCell.swift in Sources */,
+				95C8E2781A9503400065A177 /* UIButton+WebCache.m in Sources */,
+				95C8E2751A9503400065A177 /* SDWebImageDownloaderOperation.m in Sources */,
+				95C8E26F1A9503400065A177 /* MKAnnotationView+WebCache.m in Sources */,
+				95C8E2721A9503400065A177 /* SDWebImageCompat.m in Sources */,
 				950E64C21A8E9F3F00F173C6 /* DiputadosTVC.swift in Sources */,
+				95C8E27A1A9503400065A177 /* UIImage+MultiFormat.m in Sources */,
+				95C8E27D1A9503400065A177 /* UIImageView+WebCache.m in Sources */,
+				95C8E27E1A9503400065A177 /* UIView+WebCacheOperation.m in Sources */,
 				95AD365B1A914B8900E0F63C /* UIImage+Utils.swift in Sources */,
+				95C8E2741A9503400065A177 /* SDWebImageDownloader.m in Sources */,
+				95C8E27C1A9503400065A177 /* UIImageView+HighlightedWebCache.m in Sources */,
+				95C8E2731A9503400065A177 /* SDWebImageDecoder.m in Sources */,
+				95C8E27B1A9503400065A177 /* UIImage+WebP.m in Sources */,
+				95C8E2761A9503400065A177 /* SDWebImageManager.m in Sources */,
+				95C8E2711A9503400065A177 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +414,7 @@
 				95F7DF151A8E969300D832C3 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		95F7DF191A8E969300D832C3 /* LaunchScreen.xib */ = {
@@ -290,6 +423,7 @@
 				95F7DF1A1A8E969300D832C3 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -333,6 +467,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Que hacen los diputados/Que hacen los diputados-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -368,6 +503,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Que hacen los diputados/Que hacen los diputados-Bridging-Header.h";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -376,15 +512,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Que hacen los diputados/Info.plist";
+				INFOPLIST_FILE = "Que hacen los diputados/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Que hacen los diputados/Que hacen los diputados-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -393,15 +532,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Que hacen los diputados/Info.plist";
+				INFOPLIST_FILE = "Que hacen los diputados/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Que hacen los diputados/Que hacen los diputados-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -418,7 +559,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Que hacen los diputadosTests/Info.plist";
+				INFOPLIST_FILE = "Que hacen los diputadosTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Que hacen los diputados.app/Que hacen los diputados";
@@ -433,7 +574,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Que hacen los diputadosTests/Info.plist";
+				INFOPLIST_FILE = "Que hacen los diputadosTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Que hacen los diputados.app/Que hacen los diputados";

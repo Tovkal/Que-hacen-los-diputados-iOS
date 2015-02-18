@@ -10,11 +10,8 @@ import UIKit
 
 extension UIImage {
     
-    func resize(newSize: CGSize) -> UIImage? {
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
-        self.drawInRect(CGRectMake(0, 0, newSize.width, newSize.height))
-        var newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage
+    func cropImage(cropRect: CGRect) -> UIImage {
+        var imageRef = CGImageCreateWithImageInRect(self.CGImage, cropRect)
+        return UIImage(CGImage:imageRef)!
     }
 }

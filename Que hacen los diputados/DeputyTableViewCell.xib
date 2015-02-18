@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -13,35 +14,43 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OaS-Sw-mcR" id="ZD4-YT-aoK">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LIP-V9-ZZ5">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LIP-V9-ZZ5">
                         <rect key="frame" x="8" y="10" width="90" height="90"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="90" id="f1H-ZG-yg0"/>
-                            <constraint firstAttribute="height" constant="90" id="uoV-Mh-9Vx"/>
+                            <constraint firstAttribute="width" secondItem="LIP-V9-ZZ5" secondAttribute="height" multiplier="1:1" id="MQa-fs-Yii"/>
+                            <constraint firstAttribute="height" constant="90" id="yG6-VL-MGJ"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLN-IA-E2N">
                         <rect key="frame" x="106" y="45" width="206" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="206" id="bfK-og-ITR"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="b7L-R9-95Y">
+                        <rect key="frame" x="74" y="76" width="24" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="56U-UT-sFk"/>
+                            <constraint firstAttribute="height" constant="24" id="Ul3-4x-p6C"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="QLN-IA-E2N" secondAttribute="bottom" constant="35.5" id="48Y-Y9-hsW"/>
-                    <constraint firstItem="QLN-IA-E2N" firstAttribute="leading" secondItem="ZD4-YT-aoK" secondAttribute="leadingMargin" constant="98" id="Eud-T2-V9f"/>
-                    <constraint firstItem="LIP-V9-ZZ5" firstAttribute="leading" secondItem="ZD4-YT-aoK" secondAttribute="leadingMargin" id="Rs7-xt-hdp"/>
-                    <constraint firstItem="QLN-IA-E2N" firstAttribute="top" secondItem="ZD4-YT-aoK" secondAttribute="topMargin" constant="37" id="dBz-h1-4Ls"/>
-                    <constraint firstItem="QLN-IA-E2N" firstAttribute="leading" secondItem="LIP-V9-ZZ5" secondAttribute="trailing" constant="8" id="j13-mr-4n5"/>
-                    <constraint firstItem="LIP-V9-ZZ5" firstAttribute="top" secondItem="ZD4-YT-aoK" secondAttribute="topMargin" constant="2" id="x7D-LI-f2T"/>
+                    <constraint firstItem="LIP-V9-ZZ5" firstAttribute="leading" secondItem="ZD4-YT-aoK" secondAttribute="leadingMargin" id="1IH-W5-j1X"/>
+                    <constraint firstItem="QLN-IA-E2N" firstAttribute="leading" secondItem="LIP-V9-ZZ5" secondAttribute="trailing" constant="8" id="EYs-zA-7el"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="LIP-V9-ZZ5" secondAttribute="bottom" constant="2" id="IxT-GD-59g"/>
+                    <constraint firstItem="QLN-IA-E2N" firstAttribute="trailing" secondItem="ZD4-YT-aoK" secondAttribute="trailingMargin" id="aXG-1h-E5s"/>
+                    <constraint firstItem="b7L-R9-95Y" firstAttribute="leading" secondItem="LIP-V9-ZZ5" secondAttribute="trailing" constant="-24" id="fUT-Zv-VI1"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="QLN-IA-E2N" secondAttribute="bottom" constant="36" id="hMc-xj-8GO"/>
+                    <constraint firstItem="LIP-V9-ZZ5" firstAttribute="top" secondItem="ZD4-YT-aoK" secondAttribute="topMargin" constant="2" id="hOL-E3-8Xb"/>
+                    <constraint firstItem="b7L-R9-95Y" firstAttribute="top" secondItem="LIP-V9-ZZ5" secondAttribute="bottom" constant="-24" id="kHa-eD-NpQ"/>
+                    <constraint firstItem="QLN-IA-E2N" firstAttribute="top" secondItem="ZD4-YT-aoK" secondAttribute="topMargin" constant="37" id="sRT-7g-4Jg"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="name" destination="QLN-IA-E2N" id="O2U-eW-hEd"/>
-                <outlet property="thumbnail" destination="LIP-V9-ZZ5" id="cWV-TG-yAf"/>
+                <outlet property="party" destination="b7L-R9-95Y" id="Ccu-uo-mXo"/>
+                <outlet property="profile" destination="LIP-V9-ZZ5" id="4rs-po-jVM"/>
             </connections>
             <point key="canvasLocation" x="238" y="432"/>
         </tableViewCell>

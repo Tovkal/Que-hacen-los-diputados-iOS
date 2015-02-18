@@ -14,15 +14,15 @@ class DiputadosTVC: UITableViewController {
     
     let url = "http://api.quehacenlosdiputados.net/diputados"
     
-    //private var diputados = JSON.nullJSON
-    private var diputados: JSON = [["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"]]
+    private var diputados = JSON.nullJSON
+    //private var diputados: SwiftyJSON.JSON = [["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"],["id":87, "nombre":"Juan Antonio", "apellidos":"Abad Pérez", "partido":"PP"]]
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         super.navigationController?.tabBarController?.tabBar.tintColor = UIColor.whiteColor()
         
-        //fetchData()
+        fetchData()
         
         var nib = UINib(nibName: "DeputyTableViewCell", bundle: nil)
         
@@ -94,50 +94,50 @@ class DiputadosTVC: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("DeputyCell") as DeputyTableViewCell
         
+        let cell = tableView.dequeueReusableCellWithIdentifier("DeputyCell") as DeputyTableViewCell
+
+        cell.layoutIfNeeded()
+
         // Build name string
         let surnameAttributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(16.0)]
         var fullName = NSMutableAttributedString(string: self.diputados[indexPath.row]["apellidos"].string!, attributes: surnameAttributes)
         let name = self.diputados[indexPath.row]["nombre"].string!
         fullName.appendAttributedString(NSAttributedString(string: ", \(name)"))
         
-        // Set cell attributes
-        cell.name.attributedText = fullName
-        cell.imageView?.image = downloadProfileImage(self.diputados[indexPath.row]["id"].int!)
+        // Deputy image url
+        let deputyId = self.diputados[indexPath.row]["id"].int!
+        var profileURL = NSURL(string: "http://quehacenlosdiputados.net/img/imagenesDipus/\(deputyId).jpg")
         
-        // Make sure the constraints have been added to this cell, since it may have just been created from scratch
+        // Party image url
+        let partyName = self.diputados[indexPath.row]["partido"].string!
+        // Remove accents (i.e. COMPROMÍS -> COMPROMIS)
+        let normalizedPartyName = NSString(data: partyName.dataUsingEncoding(NSASCIIStringEncoding, allowLossyConversion: true)!, encoding: NSASCIIStringEncoding)!
+        var partyURL = NSURL(string: "http://quehacenlosdiputados.net/img/miniaturasPartidos/\(normalizedPartyName).png")
+        
+        // Party image
+        cell.party.sd_setImageWithURL(partyURL)
+        
+        // Profile image
+        SDWebImageManager.sharedManager().downloadImageWithURL(profileURL, options: nil, progress: {
+            receivedSize, expectedSize in
+            if receivedSize != expectedSize {
+                
+            }
+            }, completed: {
+                image, error, a , c ,s in
+                if image != nil {
+                    cell.setProfile(image.cropImage(CGRectMake(0, 0, 150, 120)))
+                }
+        })
+        
+        // Deputy name
+        cell.name.attributedText = fullName
+        
         cell.setNeedsUpdateConstraints()
         cell.updateConstraintsIfNeeded()
 
         return cell
-    }
-    
-    func downloadProfileImage(id: Int) -> UIImage? {
-        let imgURL: NSURL = NSURL(string: "http://quehacenlosdiputados.net/img/imagenesDipus/\(id).jpg")!
-        
-        // Download an NSData representation of the image at the URL
-        let request: NSURLRequest = NSURLRequest(URL: imgURL)
-        
-        var response = NSURLConnection.sendSynchronousRequest(request, returningResponse: nil, error: nil)
-        
-        var image = UIImage(data: response!)
-        
-        return image
-        
-                
-        /*NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response: NSURLResponse!,data: NSData!,error: NSError!) -> Void in
-            if !(error? != nil) {
-                var image = UIImage(data: data)
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.imageView.image = image
-                })
-            }
-            else {
-                println("Error: \(error.localizedDescription)")
-            }
-        })*/
     }
     
     func fetchData() {
