@@ -35,6 +35,20 @@ class DiputadosTVC: UITableViewController {
         // Setting the estimated row height prevents the table view from calling tableView:heightForRowAtIndexPath: for every row in the table on first load;
         // it will only be called as cells are about to scroll onscreen. This is a major performance optimization.
         tableView.estimatedRowHeight = 100.0 // set this to whatever your "average" cell height is; it doesn't need to be very accurate
+        
+        
+        // Nav bar buttons
+        let exdiputados = UIBarButtonItem(title: "Exdiputados", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        let filter = UIBarButtonItem(image: UIImage(named: "Filter"), style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        let sort = UIBarButtonItem(image: UIImage(named: "Sort"), style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+
+        
+        let rightButtonsArray = [sort, filter]
+        
+        self.navigationItem.leftBarButtonItem = exdiputados
+        self.navigationItem.rightBarButtonItems = rightButtonsArray
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -100,7 +114,7 @@ class DiputadosTVC: UITableViewController {
         cell.layoutIfNeeded()
 
         // Build name string
-        let surnameAttributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(16.0)]
+        let surnameAttributes = [NSFontAttributeName: UIFont.boldSystemFontOfSize(12)]
         var fullName = NSMutableAttributedString(string: self.diputados[indexPath.row]["apellidos"].string!, attributes: surnameAttributes)
         let name = self.diputados[indexPath.row]["nombre"].string!
         fullName.appendAttributedString(NSAttributedString(string: ", \(name)"))
